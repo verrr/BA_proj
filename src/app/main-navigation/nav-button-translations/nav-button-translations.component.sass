@@ -1,0 +1,16 @@
+@import "../../../varsMixins"
+
+*
+  +fontHighlight
+
+.imgButton
+  +size(1.5rem, 1.5rem)
+
+#languageButton
+  border-bottom: 3px solid transparent
+  +size(100%,100%)
+  min-width: 50px
+  +rowFlex(center,center,center)
+
+  &:hover
+    border-bottom: 3px solid $fontColorHighlight

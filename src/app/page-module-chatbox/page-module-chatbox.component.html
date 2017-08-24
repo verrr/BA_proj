@@ -1,0 +1,54 @@
+<div id="chat-button" (click)="onOpenChatbox();onAnimateContainer()">
+  <p class="w3-animate-opacity" *ngIf="!chatOpened; else closeChat">Open</p>
+  <ng-template #closeChat>
+
+  </ng-template>
+  <ng-template #closeChat>
+    <p class="w3-animate-opacity">Close</p>
+
+    <!---->
+  </ng-template>
+</div>
+
+<div id="chat-container" #scrollChat [@chatState]="state" >
+
+  <div id="chat-header">
+    <p>
+      {{chatbox.header}}
+    </p>
+
+  </div>
+
+  <div id="chat-content-wrapper">
+
+
+  <div id="card-container">
+    <div class="ai-card" *ngFor="let card of aiCards">
+      <p>
+        {{card.aiText}}
+      </p>
+    </div>
+  </div>
+
+  <div id="button-container">
+    <div class="ai-button" *ngFor="let button of chatbox.buttons">
+      <p>
+          {{button.title}}
+      </p>
+    </div>
+  </div>
+  <div id="userChat">
+    <div class="userCard" *ngFor="let card of userCard;">
+      <p>
+        {{card}}
+      </p>
+    </div>
+  </div>
+</div>
+
+  <form (ngSubmit)=" onChatSubmit(data)" #data="ngForm">
+    <input id="userInputField" type="text"  placeholder="Ask something...." ngModel name="userInput">
+    <button type="submit"></button>
+  </form>
+</div>
+

@@ -1,0 +1,251 @@
+@import './fonts'
+
+//mixins
+=noStyle()
+  margin: 0
+  padding: 0
+  text-decoration: none
+
+  &:focus
+    outline-color: transparent
+
+= transition($args...)
+  -webkit-transition: $args
+  -moz-transition: $args
+  -ms-transition: $args
+  -o-transition: $args
+  transition: $args
+
+=border-radius($radius)
+  -webkit-border-radius: $radius
+  -moz-border-radius:    $radius
+  -ms-border-radius:     $radius
+  border-radius:         $radius
+
+=rowFlex($justify, $align, $content)
+  display: flex
+  flex-flow: row nowrap
+  justify-content: $justify
+  align-items: $align
+  align-content: $content
+
+=columnFlex($justify, $align, $content)
+  display: flex
+  flex-flow: column nowrap
+  justify-content: $justify
+  align-items: $align
+  align-content: $content
+
+=size($height,$width)
+  height: $height
+  width: $width
+=blur($value)
+  -webkit-filter: blur($value)
+  filter: blur($value)
+
+
+
+
+
+//vars
+
+  //nav
+$navHeight: 70px
+$navLinkSpacing: 0 5px 0 5px
+$navPadding: 20px
+
+
+$headerBackground: 'http://wallpaper-gallery.net/images/blurred-wallpaper/blurred-wallpaper-24.jpg'
+
+
+
+$borderRadiusDefault: 3px
+//footer
+$footerH: 60vh
+//colors
+$bone: #F8F1E5
+$steelBlue: #426E86
+$coal: #2F3131
+$sunshine: #F9BA32
+$greyishWhite: #F0EFF0
+$text-display-color: #4e4e4e
+//fonts
+$fontSizeSectionTitle: 60px
+//def
+$fontStyleDefault: colaborateLightRegular, sans-serif
+$fontSizeDefault: 18px
+$fontColorDefault: $coal
+$fontAlignDefault: center
+
+$fontStyleHover: 'colaborateLightRegular'
+$fontSizeHover: 1rem
+$fontColorHover: $sunshine
+$fontAlignHover: center
+
+$fontStyleHighlight: 'colaborateLightRegular'
+$fontSizeHighlight: 1rem
+$fontAlignHighlight: center
+$fontColorHighlight:  $bone
+
+//service-categories
+$paragraph-font: colaborate-thinregular, sans-serif
+$paragraph-font-size: 16px
+$paragraph-line-height: 23px
+$paragraph-font-color: $text-display-color
+=display-paragraph()
+  font:
+    family: $paragraph-font
+    size: $paragraph-font-size
+  color: $paragraph-font-color
+  line-height: $paragraph-line-height
+
+$title-font: colaborateLightRegular, sans-serif
+$title-font-size: 25px
+$title-line-height: 26px
+$title-font-color: $steelBlue
+=display-title()
+  font:
+    family: $title-font
+    size: $title-font-size
+  color: $title-font-color
+  line-height: $title-line-height
+  text-transform: uppercase
+
+$link-font: colaborate-mediumregular, sans-serif
+$link-font-size: 15px
+$link-line-height: 15px
+$link-font-color: $sunshine
+=display-link()
+  font:
+    family: $link-font
+    size: $link-font-size
+  color: $link-font-color
+  line-height: $link-line-height
+  text-transform: uppercase
+//buttons
+$buttonDefaultWidth: 250px
+$buttonDefaultHeight: 60px
+$buttonTextColor: #F8F1E5
+$buttonHoverColor: #F8F1E5
+$buttonBorderColor: #F8F1E5
+$borderStyle: 1.5px solid $buttonBorderColor
+$textHoverColor: #F9BA32
+
+//references
+$ref-footer-c: rgba(0,0,0,0.2)
+//CHATbOX
+//chat button
+$chat-button-color: #549db9
+$chat-button-text-color: #ffffff
+$chat-button-notification-color: #ee4f57
+$chat-button-open-img: 'openB.jpg'
+$chat-button-close-img: 'close.jpg'
+
+//chat input
+$chat-input-bg-color: #ffffff
+$chat-input-placeholder-color: #ababab
+$chat-input-send-img: 'sendArrow.jpg'
+
+//chat output
+$chat-output-bg: #f3f3f3
+$chat-output-header-bg: #71706d
+$chat-output-header-text-color: #f7f7f7
+$chat-output-user-card-color: #66d2be
+$chat-output-user-text-color: #fff
+$chat-output-ai-card-hover-bg: #66d2be
+$chat-output-ai-card-hover-text-color: #fff
+$chat-output-ai-card-text-color: #66d2be
+$chat-output-ai-card-border-color: #66d2be
+$chat-output-ai-card-bg: #66d2be
+$chat-output-ai-card-color: #549db9
+
+
+//customized mixins
+=buttonEmpty()
+  width: $buttonDefaultWidth
+  height: $buttonDefaultHeight
+  background-color: transparent
+
+  border: $borderStyle
+    radius: $borderRadiusDefault
+  +display-link
+  color: $buttonTextColor
+  cursor: pointer
+
+  &:hover
+    background-color: $buttonHoverColor
+    color: $textHoverColor
+
+
+
+=buttonCards()
+  width: $buttonDefaultWidth
+  height: $buttonDefaultHeight
+  background-color: $steelBlue
+  cursor: pointer
+  border: transparent
+    radius: $borderRadiusDefault
+  +display-link
+  color: $buttonTextColor
+
+
+  &:hover
+    background-color: #1883ba
+    color: $buttonTextColor
+
+
+
+=fontDefault()
+  font-family: $fontStyleDefault
+  font-size: $fontSizeDefault
+
+  color: $fontColorDefault
+  vertical-align: middle
+
+=fontHighlight()
+  font-family: $fontStyleHighlight
+  font-size: $fontSizeHighlight
+  text-align: $fontAlignHighlight
+  color: $fontColorHighlight
+  vertical-align: middle
+
+=fontHover()
+  font-family: $fontStyleHover
+  font-size: $fontSizeHover
+  text-align: $fontAlignHover
+  color: $fontColorHover
+  vertical-align: middle
+
+
+=inputNoFill($height, $width)
+  background-color: rgb(255, 255, 255)
+  background-color: rgba(255, 255, 255, 0.4)
+  border-radius: 5px
+  outline-color: transparent
+
+  border: $borderStyle
+  +border-radius($borderRadiusDefault)
+
+  +fontDefault
+  font-size: $title-font-size
+  color: black
+  +size($height,$width)
+
+
+  &:focus
+    background-color: whitesmoke
+
+
+=box-shadow($left, $top, $blur, $spread, $color, $inset: false)
+  @if $inset
+    -webkit-box-shadow: inset $left $top $blur $spread $color
+    -moz-box-shadow: inset $left $top $blur $spread $color
+    box-shadow: inset $left $top $blur $spread $color
+  @else
+    -webkit-box-shadow: $left $top $blur $spread $color
+    -moz-box-shadow: $left $top $blur $spread $color
+    box-shadow: $left $top $blur $spread $color
+
+//@medias
+$simpleBP: 1000px
+

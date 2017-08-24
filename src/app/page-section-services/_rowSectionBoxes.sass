@@ -1,0 +1,39 @@
+@import ../../varsMixins
+*
+  h2
+    +display-title
+    margin: 5px 0
+  p
+    margin: 5px 0
+    +display-paragraph
+  a
+    margin: 5px 0
+    +display-link
+    border-bottom: 1.7px solid transparent
+    &:hover
+      border-bottom: 1.7px solid $sunshine
+  [role='cover']
+    &:hover
+      -webkit-filter: saturate(2) /* Safari 6.0 - 9.0 */
+      filter: saturate(2)
+  [role='description']
+    img
+      -webkit-filter: drop-shadow(0 0 7px rgba(93, 196, 196, .6)) /* Safari 6.0 - 9.0 */
+      filter: drop-shadow(0 0 7px rgba(93, 196, 196, .6))
+.basicServiceRow
+  width: 100%
+  height: calc(33.333vh - 25px)
+  background-color: white
+  +rowFlex(center, center, center)
+
+  //border: 3px solid red
+
+.basicServiceColumn
+  background:
+    size: cover
+    position: center center
+  width: 50%
+  height: 100%
+  +columnFlex(center, center, center)
+
+  //border: 1px solid blue

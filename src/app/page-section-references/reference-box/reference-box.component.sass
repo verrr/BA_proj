@@ -1,0 +1,47 @@
+@import ../../../varsMixins
+
+#reference-box-container
+  +noStyle
+  +size(auto,100vw)
+  +rowFlex(center, center, center)
+  flex-wrap: wrap
+
+
+  .reference-box
+    +size(350px, 470px)
+    margin: 5px
+    position: relative
+    overflow-y: hidden
+    &:hover
+      filter: drop-shadow(0 0 7px rgba(0,0,0,0.2))
+    .reference-footer
+      +size(70px,100%)
+      +columnFlex(center,center,center)
+      background-color: $ref-footer-c
+      position: absolute
+      bottom: -70px
+      transition: transform .32s ease-in-out
+      p
+        position: absolute
+        +display-paragraph
+        font-size: large
+        font-weight: bold
+        color: $fontColorHighlight
+        transition: all .32s ease-in-out
+        background-color: rgba(256,223,2,0.5)
+        +border-radius(3px)
+        text-align: center
+        padding: 4px
+
+      a
+        +display-link
+        color: $fontColorHighlight
+        &:hover
+          border-bottom: 1px solid $fontColorHighlight
+    &:hover .reference-footer
+      transform: translate3d(0px, -70px, 0px)
+      +blur(0px)
+    &:hover .reference-footer p
+      transform: translate3d(0px, -140px, 0px)
+
+

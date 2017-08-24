@@ -1,0 +1,80 @@
+@import "../../../varsMixins"
+
+#jobs-header-container
+  +size(calc(100vh - 64px), 100%)
+  //border: 1px solid red
+  position: relative
+
+  section
+
+    height: 100%
+    width: 100%
+    text:
+      align: center
+    h2
+      text-transform: uppercase
+      +display-title
+    p
+      +display-paragraph
+      +size(100%, 100%)
+      +border-radius(50%)
+      padding: 20px
+      font-size: 1em
+
+  #left-triangle
+
+    shape-outside: polygon(0 0, 0 100%, 100% 0)
+    clip-path: polygon(0 0, 0 100%, 100% 0)
+    position: absolute
+    z-index: 1
+    &:hover .left-bg
+      filter: grayscale(0)
+
+    .left-content
+      position: absolute
+      +size(300px, 300px)
+      background-color: rgba(255, 255, 255, 0.7)
+      left: 10%
+      top: 15%
+      +border-radius(50%)
+      padding: 20px
+      +box-shadow( 0, 0, 20px, -6px, $steelBlue ,true)
+
+    .left-bg
+      +size(100%,100%)
+      filter: grayscale(50%)
+
+      shape-outside: polygon(0 0, 0 100%, 100% 0)
+      clip-path: polygon(0 0, 0 100%, 100% 0)
+      position: relative
+
+
+  #right-triangle
+    shape-outside: polygon(0 100%, 100% 0, 100% 100%)
+    clip-path: polygon(0 100%, 100% 0, 100% 100%)
+    position: absolute
+    z-index: 2
+    &:hover .right-bg
+      filter: grayscale(0)
+
+    .right-content
+      position: absolute
+      +size(300px, 300px)
+      background-color: rgba(255, 255, 255, 0.7)
+      +border-radius(50%)
+      padding: 20px
+      right: 10%
+      bottom: 15%
+      z-index: 222
+      +box-shadow( 0, 0, 20px, -6px, $steelBlue ,true)
+
+
+    .right-bg
+      +size(100%,100%)
+      filter: grayscale(50%)
+      shape-outside: polygon(0 100%, 100% 0, 100% 100%)
+      clip-path: polygon(0 100%, 100% 0, 100% 100%)
+      position: relative
+
+
+

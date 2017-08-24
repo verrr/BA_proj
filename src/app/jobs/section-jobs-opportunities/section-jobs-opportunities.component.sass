@@ -1,0 +1,67 @@
+@import "../../../varsMixins"
+
+#opportunities-container
+  margin-bottom: $footerH
+  background-color: #EBEBEB
+  +columnFlex(center, center, center)
+
+  #selection-menu
+    +size(auto, 100%)
+
+    ul
+      list-style: none
+      +rowFlex(space-between, center, center)
+      padding: 20px
+
+      li
+        a
+          +columnFlex(center, center, center)
+    @media screen and (max-width: 1000px)
+      display: none
+#opportunities
+  //border: 1px solid red
+  +size(auto, 100%)
+  +columnFlex(center, center, center)
+
+  .opportunity
+    +size(auto, 100%)
+    +columnFlex(center, flex-start, center)
+    margin: 30px
+    @media screen and (max-width: $simpleBP)
+      +columnFlex(center, center, center)
+    h1
+      margin-left: 10px
+      +display-title
+      font-weight: 300
+
+
+    //border: 1px solid red
+    .opportunity-row
+      min-width: 100%
+      +rowFlex(space-around, center, center)
+      flex-wrap: wrap
+      .opportunity-contents
+        min-width: 48%
+        margin: 10px
+        @media screen and (min-width: $simpleBP)
+
+          &:nth-child(2n-1)
+            margin-right: auto
+        .row
+          background-color: white
+          +rowFlex(space-between, center, center)
+
+          h3
+            +size(40px, auto)
+            margin-left: 10px
+            +display-title
+            font-size: medium
+            font-weight: 300
+            line-height: 43px
+          a
+            +buttonCards
+            +size(45px, 100px)
+            border-radius: 0
+            text-align: center
+            line-height: 45px
+

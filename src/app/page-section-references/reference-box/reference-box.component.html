@@ -1,0 +1,14 @@
+<div id="reference-box-container" >
+
+  <div class="reference-box" *ngFor="let item of reference"
+       [style.background]="'url(assets/img/ref/' + item.imgName+ ')'"
+       [style.backgroundPosition]="'center'" [style.backgroundSize]="'cover'">
+
+    <div class=" reference-footer" >
+      <p>{{item.description}}</p>
+      <a href="{{item.link}}">{{item.title}}</a>
+    </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,21 @@
+@import "../../../varsMixins"
+*
+  +noStyle
+section
+  background-color: white
+
+  +size(auto, 100%)
+  min-height: 30vh
+  padding: 30px
+  +columnFlex(space-around, center, center)
+  h1
+    +noStyle
+    +display-title
+    font-family: colaborate-thinregular, sans-serif
+  p
+    width: 85%
+    +display-paragraph
+
+    text-align: center
+    line-height: 30px
+    margin-top: 30px

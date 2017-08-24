@@ -1,0 +1,28 @@
+@import ../../varsMixins
+
+
+
+
+.aboutContainer
+  background:
+    color: white
+  +size(45vh, 100%)
+  +rowFlex(space-around,center,center)
+
+  +box-shadow( 0, .1px, 20px, -9px, $coal, true )
+
+  *
+    h2
+      margin: 20px 5px
+      +display-title
+    p
+      +display-paragraph
+      text-align: center
+
+  &[role='what']
+  &[role='who']
+  &[role='how']
+.aboutBox
+  +size(80%, 30%)
+  +columnFlex(center,center,center)
+//border: 1px solid black

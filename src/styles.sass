@@ -1,0 +1,17 @@
+@import "./varsMixins"
+body
+  width: 100%
+  height: 100%
+
+  margin: 0
+  padding: 0
+  &::-webkit-scrollbar
+    display: none
+
+html
+  height: 100%
+  font-size: 16px
+
+  *
+    +noStyle
+    +fontDefault

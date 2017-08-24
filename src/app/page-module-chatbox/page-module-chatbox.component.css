@@ -1,0 +1,204 @@
+@font-face {
+  font-family: "colaborateLightRegular";
+  src: url("/assets/fonts/colaborate_light/ColabLig-webfont.eot");
+  src: url("/assets/fonts/colaborate_light/ColabLig-webfont.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/colaborate_light/ColabLig-webfont.woff") format("woff"), url("/assets/fonts/colaborate_light/ColabLig-webfont.ttf") format("truetype"), url("/assets/fonts/colaborate_light/ColabLig-webfont.svg#colaborateLightRegular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "colaborate-mediumregular";
+  src: url("/assets/fonts/colaborate_medium/ColabMed-webfont.eot");
+  src: url("/assets/fonts/colaborate_medium/ColabMed-webfont.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/colaborate_medium/ColabMed-webfont.woff") format("woff"), url("/assets/fonts/colaborate_medium/ColabMed-webfont.ttf") format("truetype"), url("/assets/fonts/colaborate_medium/ColabMed-webfont.svg#colaborateLightRegular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "colaborate-thinregular";
+  src: url("/assets/fonts/colaborate_thin/ColabThi-webfont.eot");
+  src: url("/assets/fonts/colaborate_thin/ColabThi-webfont.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/colaborate_thin/ColabThi-webfont.woff") format("woff"), url("/assets/fonts/colaborate_thin/ColabThi-webfont.ttf") format("truetype"), url("/assets/fonts/colaborate_thin/ColabThi-webfont.svg#colaborateLightRegular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "geosansLight";
+  src: url("/assets/fonts/geosans_light/GeosansLight.eot");
+  src: url("/assets/fonts/geosans_light/GeosansLight.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/geosans_light/GeosansLight.woff") format("woff"), url("/assets/fonts/geosans_light/GeosansLight.ttf") format("truetype"), url("/assets/fonts/geosans_light/GeosansLight.svg#colaborateLightRegular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "openSans-light";
+  src: url("/assets/fonts/OpenSans-Light/OpenSans-Light-webfont.eot");
+  src: url("/assets/fonts/OpenSans-Light/OpenSans-Light-webfont.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/OpenSans-Light/OpenSans-Light-webfont.woff") format("woff"), url("/assets/fonts/OpenSans-Light/OpenSans-Light-webfont.ttf") format("truetype"), url("/assets/fonts/OpenSans-Light/OpenSans-Light-webfont.svg#colaborateLightRegular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "openSans-regular";
+  src: url("/assets/fonts/OpenSans_Regular/OpenSans-Regular-webfont.eot");
+  src: url("/assets/fonts/OpenSans_Regular/OpenSans-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/OpenSans_Regular/OpenSans-Regular-webfont.woff") format("woff"), url("/assets/fonts/OpenSans_Regular/OpenSans-Regular-webfont.ttf") format("truetype"), url("/assets/fonts/OpenSans_Regular/OpenSans-Regular-webfont.svg#colaborateLightRegular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+#chat-button {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  background-color: #549db9;
+  position: fixed;
+  z-index: 101;
+  bottom: 50px;
+  right: 50px;
+  text-align: center;
+  line-height: 70px; }
+  #chat-button p {
+    color: #ffffff; }
+
+#chat-content-wrapper {
+  position: relative;
+  z-index: 101;
+  height: 350px;
+  width: 100%;
+  margin-bottom: 55px;
+  overflow: scroll; }
+  #chat-content-wrapper::-webkit-scrollbar {
+    display: none; }
+
+#userChat {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center; }
+  #userChat .userCard {
+    height: auto;
+    width: 260px;
+    background-color: #549db9;
+    border-radius: 12px;
+    padding: 10px;
+    margin: 3.5px 0; }
+    #userChat .userCard p {
+      height: auto;
+      width: 100%;
+      font-family: colaborate-thinregular, sans-serif;
+      font-size: 16px;
+      color: #4e4e4e;
+      line-height: 23px;
+      color: #fff; }
+
+#chat-container {
+  position: fixed;
+  z-index: 103;
+  bottom: 130px;
+  right: 50px;
+  height: 490px;
+  width: 316px;
+  min-height: 490px;
+  overflow: hidden;
+  background-color: #f3f3f3;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 20px -8px black;
+  -moz-box-shadow: 0 0 20px -8px black;
+  box-shadow: 0 0 20px -8px black;
+  transition: ease 1s; }
+  #chat-container::-webkit-scrollbar {
+    display: none; }
+  #chat-container form {
+    width: 316px;
+    position: fixed;
+    z-index: 110;
+    bottom: 130px; }
+    #chat-container form input {
+      height: 55px;
+      width: 100%;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      border: 0 transparent;
+      padding-left: 27px; }
+      #chat-container form input:focus {
+        -webkit-box-shadow: 0 -10px 20px -10px lightgrey;
+        -moz-box-shadow: 0 -10px 20px -10px lightgrey;
+        box-shadow: 0 -10px 20px -10px lightgrey; }
+    #chat-container form button {
+      height: 17px;
+      width: 17px;
+      position: absolute;
+      border: 0 transparent;
+      background-image: url("../../assets/img/chatboxImg/sendArrow.jpg");
+      background-color: transparent;
+      bottom: 22.5px;
+      right: 27px; }
+      #chat-container form button:hover {
+        cursor: pointer; }
+
+#card-container {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center; }
+  #card-container .ai-card {
+    height: auto;
+    width: 260px;
+    background-color: #549db9;
+    border-radius: 12px;
+    padding: 10px;
+    margin: 3.5px 0; }
+    #card-container .ai-card p {
+      height: auto;
+      width: 100%;
+      font-family: colaborate-thinregular, sans-serif;
+      font-size: 16px;
+      color: #4e4e4e;
+      line-height: 23px;
+      color: #fff; }
+
+#chat-header {
+  height: 80px;
+  width: 100%;
+  background-color: #71706d;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center; }
+  #chat-header p {
+    max-width: 180px;
+    font-family: colaborate-thinregular, sans-serif;
+    font-size: 16px;
+    color: #4e4e4e;
+    line-height: 23px;
+    color: #f7f7f7;
+    text-align: center; }
+
+#button-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap; }
+  #button-container .ai-button {
+    height: 35px;
+    width: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid #66d2be;
+    border-radius: 14px;
+    margin: 3.5px; }
+    #button-container .ai-button p {
+      font-family: colaborate-thinregular, sans-serif;
+      font-size: 16px;
+      color: #4e4e4e;
+      line-height: 23px;
+      color: #66d2be;
+      text-align: center; }
+    #button-container .ai-button:hover {
+      background-color: #66d2be; }
+      #button-container .ai-button:hover p {
+        color: #fff; }
+
+/*# sourceMappingURL=page-module-chatbox.component.css.map */

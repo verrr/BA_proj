@@ -1,0 +1,53 @@
+@import "../../varsMixins"
+
+nav
+  position: fixed
+  z-index: 300
+
+
+  +size($navHeight, 100%)
+  max-width: 100%
+  background-color: $coal
+
+  //+box-shadow(0, .1px, 20px, -1px, $coal)
+
+  +rowFlex(space-between,center,center)
+
+  *
+    +fontHighlight()
+
+  ul
+    height: 100%
+    list-style: none
+    +rowFlex(center,center,center)
+    padding-right: $navPadding
+
+    li
+      text-transform: uppercase
+      margin: $navLinkSpacing
+      border-bottom: 3px solid transparent
+      +size(100%,100%)
+      min-width: 50px
+      +rowFlex(center,center,center)
+
+      &:hover
+        border-bottom: 3px solid $fontColorHighlight
+
+  img
+    padding-left: $navPadding
+
+
+#linksWrapper
+  +rowFlex(center,center,center)
+  +size(100%,auto)
+
+#imgButtons
+  +rowFlex(center,center,center)
+  +size(100%,100%)
+
+  margin-right: $navPadding
+  *
+    margin: $navLinkSpacing
+    +size(100%,100%)
+    +rowFlex(center,center,center)
+

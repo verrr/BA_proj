@@ -1,0 +1,35 @@
+@import "../../../../varsMixins"
+
+#card
+  +box-shadow(0, 0 , 23px , -6px , black)
+  +size(auto, 92%)
+  min-height: 150px
+  min-width: 400px
+  //border: 1px solid red
+
+  padding: 20px
+  margin: 10px
+  background:
+    color: #EBEBEB
+
+
+
+  .row
+    +size(auto,100%)
+    +rowFlex(space-between,center,center)
+    margin-bottom: 10px
+
+    h2
+      +display-title
+      font:
+        family: colaborate-thinregular, sans-serif
+        weight: 300
+
+    button
+      +buttonCards
+      +size(50px, 200px)
+  p
+    +display-paragraph
+    text-align: justify
+
+

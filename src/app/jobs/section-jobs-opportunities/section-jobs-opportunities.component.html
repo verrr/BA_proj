@@ -1,0 +1,32 @@
+<div id="opportunities-container">
+
+  <div id="selection-menu">
+    <ul>
+      <li *ngFor="let menuItem of menuItems">
+        <a scrollTo href="#{{menuItem.name}}">
+          <img src="{{menuItem.src}}" alt="img">
+          <p>{{menuItem.name}}</p>
+        </a></li>
+    </ul>
+  </div>
+
+  <div id="opportunities">
+
+    <div class="opportunity" *ngFor="let opportunity of menuItems">
+      <h1 id="{{opportunity.name}}">{{opportunity.name}}</h1>
+      <div class="opportunity-row">
+        <div class="opportunity-contents" *ngFor="let item of opportunity.position">
+          <div class="row">
+            <h3>{{item.title}}</h3>
+            <a href="{{item.link}}">Read More</a>
+          </div>
+          <p>
+            {{item.description}}
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>

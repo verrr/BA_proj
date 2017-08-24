@@ -1,0 +1,18 @@
+<p>
+  Dummy section:
+</p>
+<!--<p>{{dummyCreationStatus}}</p>-->
+
+<input type="text" name="" id="" [(ngModel)]="dummyName">
+<p>{{dummyName}}</p>
+<button [disabled]="!allowNewDummies" (click)="onCreateDummy()">Add dummy</button>
+
+<p *ngIf="dummyCreated">{{dummyCreationStatus}}</p>
+
+
+<!--
+<ng-template #noDummy>
+  <p>No dummy created</p>
+</ng-template>
+-->
+

@@ -1,0 +1,48 @@
+@import ../../varsMixins
+
+#migrateContainer
+  +columnFlex(center,center,center)
+  height: 50vh
+  background:
+    image: url("../../assets/img/website-header.jpg")
+    size: cover
+    attachment: fixed
+  text-transform: uppercase
+  color: $buttonTextColor
+  form
+    +size(50%,100%)
+    +columnFlex(center,center,center)
+
+
+  h1
+    +noStyle
+    +display-title
+
+    color: white
+
+    font-size: $fontSizeSectionTitle
+
+.migrateInput
+  margin: 20px 0
+  padding: 0 30px
+  +inputNoFill(30%, 50%)
+*
+  [role ='migrateButton']
+    +buttonEmpty
+
+/*.migrateContainer
+  position: relative
+  height: 600px
+  background:
+    image: url("../../assets/img/andrew-branch-106877.jpg")
+    size: auto 600px
+    position: center bottom
+    attachment: fixed
+
+  #migrateButton
+    +inputNoFill(40px, 200px)
+    position: absolute
+    top: 50%
+    margin-top: -20px
+  button
+    +buttonEmpty

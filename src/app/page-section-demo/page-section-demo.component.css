@@ -1,0 +1,82 @@
+@font-face {
+  font-family: "colaborateLightRegular";
+  src: url("/assets/fonts/colaborate_light/ColabLig-webfont.eot");
+  src: url("/assets/fonts/colaborate_light/ColabLig-webfont.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/colaborate_light/ColabLig-webfont.woff") format("woff"), url("/assets/fonts/colaborate_light/ColabLig-webfont.ttf") format("truetype"), url("/assets/fonts/colaborate_light/ColabLig-webfont.svg#colaborateLightRegular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "colaborate-mediumregular";
+  src: url("/assets/fonts/colaborate_medium/ColabMed-webfont.eot");
+  src: url("/assets/fonts/colaborate_medium/ColabMed-webfont.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/colaborate_medium/ColabMed-webfont.woff") format("woff"), url("/assets/fonts/colaborate_medium/ColabMed-webfont.ttf") format("truetype"), url("/assets/fonts/colaborate_medium/ColabMed-webfont.svg#colaborateLightRegular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "colaborate-thinregular";
+  src: url("/assets/fonts/colaborate_thin/ColabThi-webfont.eot");
+  src: url("/assets/fonts/colaborate_thin/ColabThi-webfont.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/colaborate_thin/ColabThi-webfont.woff") format("woff"), url("/assets/fonts/colaborate_thin/ColabThi-webfont.ttf") format("truetype"), url("/assets/fonts/colaborate_thin/ColabThi-webfont.svg#colaborateLightRegular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "geosansLight";
+  src: url("/assets/fonts/geosans_light/GeosansLight.eot");
+  src: url("/assets/fonts/geosans_light/GeosansLight.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/geosans_light/GeosansLight.woff") format("woff"), url("/assets/fonts/geosans_light/GeosansLight.ttf") format("truetype"), url("/assets/fonts/geosans_light/GeosansLight.svg#colaborateLightRegular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "openSans-light";
+  src: url("/assets/fonts/OpenSans-Light/OpenSans-Light-webfont.eot");
+  src: url("/assets/fonts/OpenSans-Light/OpenSans-Light-webfont.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/OpenSans-Light/OpenSans-Light-webfont.woff") format("woff"), url("/assets/fonts/OpenSans-Light/OpenSans-Light-webfont.ttf") format("truetype"), url("/assets/fonts/OpenSans-Light/OpenSans-Light-webfont.svg#colaborateLightRegular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "openSans-regular";
+  src: url("/assets/fonts/OpenSans_Regular/OpenSans-Regular-webfont.eot");
+  src: url("/assets/fonts/OpenSans_Regular/OpenSans-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/OpenSans_Regular/OpenSans-Regular-webfont.woff") format("woff"), url("/assets/fonts/OpenSans_Regular/OpenSans-Regular-webfont.ttf") format("truetype"), url("/assets/fonts/OpenSans_Regular/OpenSans-Regular-webfont.svg#colaborateLightRegular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+.demoContainer {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 50vh;
+  background-image: url("../../assets/img/icons/ref2.jpg");
+  background-size: auto;
+  background-position: center left;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  text-transform: uppercase;
+  color: #F8F1E5; }
+  .demoContainer h1 {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: colaborateLightRegular, sans-serif;
+    font-size: 25px;
+    color: #426E86;
+    line-height: 26px;
+    text-transform: uppercase;
+    color: white;
+    margin: 30px 0;
+    font-size: 60px; }
+    .demoContainer h1:focus {
+      outline-color: transparent; }
+  .demoContainer .demoButton {
+    width: 250px;
+    height: 60px;
+    background-color: transparent;
+    border: 1.5px solid #F8F1E5;
+      border-radius: 3px;
+    font-family: colaborate-mediumregular, sans-serif;
+    font-size: 15px;
+    color: #F9BA32;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #F8F1E5;
+    cursor: pointer; }
+    .demoContainer .demoButton:hover {
+      background-color: #F8F1E5;
+      color: #F9BA32; }
+
+/*# sourceMappingURL=page-section-demo.component.css.map */

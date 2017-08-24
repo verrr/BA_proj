@@ -1,0 +1,29 @@
+@import "../../../varsMixins"
+
+#openings
+
+  app-job-card-opening
+    width: 50%
+    min-width: 420px
+
+    &:nth-child(2n-1)
+      margin-right: auto
+
+
+  width: 100%
+  background:
+    image: url("../../../assets/img/jobs/urgent_opening.jpg")
+    size: cover
+    attachment: fixed
+
+  +rowFlex(center,center,center)
+  flex-flow: row wrap
+
+  @media screen and (max-width : 1000px)
+
+    #openings
+      +columnFlex(center,center,center)
+
+    app-job-card-opening
+      &:nth-child(2n-1)
+        margin-right: 0

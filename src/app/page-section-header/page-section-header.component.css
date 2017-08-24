@@ -1,0 +1,154 @@
+@font-face {
+  font-family: "colaborateLightRegular";
+  src: url("/assets/fonts/colaborate_light/ColabLig-webfont.eot");
+  src: url("/assets/fonts/colaborate_light/ColabLig-webfont.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/colaborate_light/ColabLig-webfont.woff") format("woff"), url("/assets/fonts/colaborate_light/ColabLig-webfont.ttf") format("truetype"), url("/assets/fonts/colaborate_light/ColabLig-webfont.svg#colaborateLightRegular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "colaborate-mediumregular";
+  src: url("/assets/fonts/colaborate_medium/ColabMed-webfont.eot");
+  src: url("/assets/fonts/colaborate_medium/ColabMed-webfont.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/colaborate_medium/ColabMed-webfont.woff") format("woff"), url("/assets/fonts/colaborate_medium/ColabMed-webfont.ttf") format("truetype"), url("/assets/fonts/colaborate_medium/ColabMed-webfont.svg#colaborateLightRegular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "colaborate-thinregular";
+  src: url("/assets/fonts/colaborate_thin/ColabThi-webfont.eot");
+  src: url("/assets/fonts/colaborate_thin/ColabThi-webfont.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/colaborate_thin/ColabThi-webfont.woff") format("woff"), url("/assets/fonts/colaborate_thin/ColabThi-webfont.ttf") format("truetype"), url("/assets/fonts/colaborate_thin/ColabThi-webfont.svg#colaborateLightRegular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "geosansLight";
+  src: url("/assets/fonts/geosans_light/GeosansLight.eot");
+  src: url("/assets/fonts/geosans_light/GeosansLight.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/geosans_light/GeosansLight.woff") format("woff"), url("/assets/fonts/geosans_light/GeosansLight.ttf") format("truetype"), url("/assets/fonts/geosans_light/GeosansLight.svg#colaborateLightRegular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "openSans-light";
+  src: url("/assets/fonts/OpenSans-Light/OpenSans-Light-webfont.eot");
+  src: url("/assets/fonts/OpenSans-Light/OpenSans-Light-webfont.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/OpenSans-Light/OpenSans-Light-webfont.woff") format("woff"), url("/assets/fonts/OpenSans-Light/OpenSans-Light-webfont.ttf") format("truetype"), url("/assets/fonts/OpenSans-Light/OpenSans-Light-webfont.svg#colaborateLightRegular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "openSans-regular";
+  src: url("/assets/fonts/OpenSans_Regular/OpenSans-Regular-webfont.eot");
+  src: url("/assets/fonts/OpenSans_Regular/OpenSans-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/OpenSans_Regular/OpenSans-Regular-webfont.woff") format("woff"), url("/assets/fonts/OpenSans_Regular/OpenSans-Regular-webfont.ttf") format("truetype"), url("/assets/fonts/OpenSans_Regular/OpenSans-Regular-webfont.svg#colaborateLightRegular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+.toolContainer {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center; }
+
+#demo-canvas {
+  position: absolute;
+  margin-top: 0;
+  margin-left: 0;
+  z-index: -100; }
+  @media screen and (max-width: 1000px) {
+    #demo-canvas {
+      display: none; } }
+
+.large-header {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: #111;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center center;
+  z-index: 1; }
+
+.demo .large-header {
+  background-image: url("/assets/img/mainHeaderBg.jpg");
+  background-repeat: no-repeat; }
+
+.splashBox {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 35%;
+  width: 50%; }
+  @media screen and (max-width: 1000px) {
+    .splashBox {
+      height: 35%;
+      width: 80%; } }
+  .splashBox h2 {
+    font-family: GeosansLight;
+    font-size: 38px;
+    font-weight: normal;
+    line-height: 54px;
+    color: white;
+    text-align: center;
+    text-transform: none;
+    margin-top: -30px;
+    margin-bottom: 20px; }
+    @media screen and (max-width: 1000px) {
+      .splashBox h2 {
+        font-size: 1.5em;
+        height: auto;
+        width: 100%;
+        margin-top: -20px; } }
+  .splashBox p {
+    font-family: GeosansLight;
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 28px;
+    color: white;
+    text-align: center;
+    text-transform: none;
+    margin: 0 0 22px 0;
+    max-height: 500px; }
+    @media screen and (max-width: 1000px) {
+      .splashBox p {
+        font-size: 1em;
+        height: auto;
+        width: 100%; } }
+  .splashBox .splashButtons {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center; }
+    .splashBox .splashButtons * {
+      text-transform: uppercase; }
+
+* [role='headerCallToAction'] {
+  font-family: "colaborateLightRegular";
+  font-size: 1rem;
+  text-align: center;
+  color: #F8F1E5;
+  vertical-align: middle;
+  width: 250px;
+  height: 60px;
+  background-color: transparent;
+  border: 1.5px solid #F8F1E5;
+    border-radius: 3px;
+  font-family: colaborate-mediumregular, sans-serif;
+  font-size: 15px;
+  color: #F9BA32;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #F8F1E5;
+  cursor: pointer;
+  height: 60px;
+  width: 46%; }
+  * [role='headerCallToAction']:hover {
+    background-color: #F8F1E5;
+    color: #F9BA32; }
+  * [role='headerCallToAction']:hover {
+    color: #F9BA32;
+    background-color: #F8F1E5;
+    font-family: "colaborateLightRegular";
+    font-size: 1rem;
+    text-align: center;
+    color: #F9BA32;
+    vertical-align: middle; }
+
+/*# sourceMappingURL=page-section-header.component.css.map */
